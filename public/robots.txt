@@ -1,0 +1,13 @@
+# DealConnect - robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /vendor/
+Disallow: /dealer/
+Disallow: /api/
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://dealconnect.vercel.app/sitemap.xml
