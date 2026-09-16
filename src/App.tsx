@@ -4,6 +4,8 @@ import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
 import { ThemeProvider } from './context/ThemeContext'
 import AppRoutes from './routes/AppRoutes'
+import ScrollProgress from './components/common/ScrollProgress'
+import BackToTop from './components/common/BackToTop'
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       <ThemeProvider>
         <AuthProvider>
           <CartProvider>
+            <ScrollProgress />
             <AppRoutes />
+            <BackToTop />
             <Toaster position="top-right" richColors />
           </CartProvider>
         </AuthProvider>
