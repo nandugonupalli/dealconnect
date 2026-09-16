@@ -3,21 +3,20 @@ import { Toaster } from 'sonner'
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
 import { ThemeProvider } from './context/ThemeContext'
+import { OrderProvider } from './context/OrderContext'
 import AppRoutes from './routes/AppRoutes'
-import ScrollProgress from './components/common/ScrollProgress'
-import BackToTop from './components/common/BackToTop'
 
 function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
         <AuthProvider>
-          <CartProvider>
-            <ScrollProgress />
-            <AppRoutes />
-            <BackToTop />
-            <Toaster position="top-right" richColors />
-          </CartProvider>
+          <OrderProvider>
+            <CartProvider>
+              <AppRoutes />
+              <Toaster position="top-right" richColors />
+            </CartProvider>
+          </OrderProvider>
         </AuthProvider>
       </ThemeProvider>
     </BrowserRouter>
